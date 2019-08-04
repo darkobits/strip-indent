@@ -1,0 +1,42 @@
+{
+  "name": "@darkobits/strip-indent",
+  "version": "0.1.0",
+  "description": "strip-indent",
+  "license": "WTFPL",
+  "author": "darkobits",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/darkobits/strip-indent.git"
+  },
+  "keywords": [
+    "strip",
+    "whitespace",
+    "indent",
+    "indentation",
+    "string",
+    "strings"
+  ],
+  "engines": {
+    "node": ">= 10.0.0"
+  },
+  "files": [
+    "dist"
+  ],
+  "main": "dist/strip-indent.js",
+  "scripts": {
+    "build": "nps build",
+    "test": "nps test",
+    "bump": "nps bump",
+    "prepare": "nps prepare"
+  },
+  "dependencies": {
+    "strip-ansi": "^5.2.0"
+  },
+  "devDependencies": {
+    "@darkobits/ts-unified": "^3.0.4",
+    "@types/jest": "^24.0.16",
+    "@types/node": "^12.6.9",
+    "@types/yargs": "^13.0.2",
+    "chalk": "^2.4.2"
+  }
+}
