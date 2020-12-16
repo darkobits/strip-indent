@@ -35,8 +35,8 @@ export default function stripIndent(str: string, options: StripIndentOptions = {
   }
 
   // Find the first line that contains non-whitespace characters. When making
-  // this determination, trip any ANSI escape sequences from the line.
-  const firstNonEmptyLine = lines.find(line => /[^\s]/g.test(stripAnsi(line)));
+  // this determination, strip any ANSI escape sequences from the line.
+  const firstNonEmptyLine = lines.find(line => /\S/g.test(stripAnsi(line)));
 
   // If all lines contain only whitespace characters, return.
   if (firstNonEmptyLine === undefined) {
@@ -46,7 +46,7 @@ export default function stripIndent(str: string, options: StripIndentOptions = {
   // Capture the amount of leading whitespace in the first non-empty line. When
   // computing leading whitespace, strip any ANSI escape sequences from the
   // line.
-  const leadingWhitespaceInFirstNonEmptyLine = /^[\s]+/g.exec(stripAnsi(firstNonEmptyLine));
+  const leadingWhitespaceInFirstNonEmptyLine = /^\s+/g.exec(stripAnsi(firstNonEmptyLine));
 
   // If there is no leading whitespace in the first non-empty line, return.
   if (leadingWhitespaceInFirstNonEmptyLine === null) {
@@ -62,13 +62,13 @@ export default function stripIndent(str: string, options: StripIndentOptions = {
   return lines.map((line, index) => {
     // Trim leading empty lines. When making this determination, strip any ANSI
     // escape sequences from the line.
-    if (options.stripEmptyLeading && index === 0 && /^[\s]*$/.test(stripAnsi(line))) {
+    if (options.stripEmptyLeading && index === 0 && /^\s*$/.test(stripAnsi(line))) {
       return false;
     }
 
     // Trim trailing empty lines. When making this determination, strip any ANSI
     // escape sequences from the line.
-    if (options.stripEmptyTrailing && index === lines.length - 1 && /^[\s]*$/.test(stripAnsi(line))) {
+    if (options.stripEmptyTrailing && index === lines.length - 1 && /^\s*$/.test(stripAnsi(line))) {
       return false;
     }
 
