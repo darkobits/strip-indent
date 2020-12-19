@@ -30,7 +30,7 @@
     "strip-ansi": "^6.0.0"
   },
   "devDependencies": {
-    "@darkobits/ts": "^0.2.0",
+    "@darkobits/ts": "^0.2.1",
     "chalk": "^4.1.0"
   }
 }
