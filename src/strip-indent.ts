@@ -1,24 +1,5 @@
-import os from 'os';
+import { EOL } from 'os';
 import stripAnsi from 'strip-ansi';
-
-
-/**
- * Optional options object that may be passed as a second argument to
- * strip-indent.
- */
-export interface StripIndentOptions {
-  /**
-   * If true, strip-indent will remove the first line of the provided string if
-   * it contains whitespace only.
-   */
-  stripEmptyLeading?: boolean;
-
-  /**
-   * If true, strip-indent will remove the last line of the provided string if
-   * it contains whitespace only.
-   */
-  stripEmptyTrailing?: boolean;
-}
 
 
 /**
@@ -26,8 +7,8 @@ export interface StripIndentOptions {
  * non-empty line to zero, then reduces the leading whitespace of every
  * additional line by the same amount.
  */
-export default function stripIndent(str: string, options: StripIndentOptions = {}) {
-  const lines = str.split(os.EOL);
+export default function stripIndent(str: string) {
+  const lines = str.split(EOL);
 
   // If the provided string is only 1 line, return.
   if (lines.length === 1) {
@@ -59,19 +40,5 @@ export default function stripIndent(str: string, options: StripIndentOptions = {
 
   // Remove leading whitespace from each line. Additionally, if the first and
   // last lines only contain whitespace, remove them.
-  return lines.map((line, index) => {
-    // Trim leading empty lines. When making this determination, strip any ANSI
-    // escape sequences from the line.
-    if (options.stripEmptyLeading && index === 0 && /^\s*$/.test(stripAnsi(line))) {
-      return false;
-    }
-
-    // Trim trailing empty lines. When making this determination, strip any ANSI
-    // escape sequences from the line.
-    if (options.stripEmptyTrailing && index === lines.length - 1 && /^\s*$/.test(stripAnsi(line))) {
-      return false;
-    }
-
-    return line.replace(pattern, '');
-  }).filter(line => line !== false).join(os.EOL);
+  return lines.map(line => line.replace(pattern, '')).join(EOL);
 }

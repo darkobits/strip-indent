@@ -41,26 +41,8 @@ kinfolk beard disrupt chartreuse etsy.
 */
 ```
 
-```ts
-import stripIndent from '@darkobits/strip-indent';
-
-const str = `
-  Kogi cold-pressed sriracha bespoke,
-  readymade kombucha pickled listicle tumblr
-  tousled truffaut shoreditch pop-up brunch.
-`;
-
-stripIndent(str, {stripEmptyLeading: true})
-
-/*
-
-`Kogi cold-pressed sriracha bespoke,
-readymade kombucha pickled listicle tumblr
-tousled truffaut shoreditch pop-up brunch.
-`
-
-*/
-```
+If you need to strip leading / trailing newlines or whitespace, call `trim()` on
+the string:
 
 ```ts
 import stripIndent from '@darkobits/strip-indent';
@@ -71,7 +53,7 @@ const str = `
   tousled truffaut shoreditch pop-up brunch.
 `;
 
-stripIndent(str, {stripEmptyLeading: true, stripEmptyTrailing: true})
+stripIndent(str).trim();
 
 /*
 
@@ -82,6 +64,7 @@ tousled truffaut shoreditch pop-up brunch.`
 */
 ```
 
+<br />
 <a href="#top">
   <img src="https://user-images.githubusercontent.com/441546/102322726-5e6d4200-3f34-11eb-89f2-c31624ab7488.png" style="max-width: 100%;">
 </a>
