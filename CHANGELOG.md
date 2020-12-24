@@ -2,6 +2,22 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [2.0.0](https://github.com/darkobits/strip-indent/compare/v1.0.1...v2.0.0) (2020-12-24)
+
+
+### ⚠ BREAKING CHANGES
+
+* Remove stripEmptyLeading & stripEmptyTrailing options. Prefer using .trim() instead.
+
+### 🛠 Refactoring
+
+* Remove stripEmptyLeading & stripEmptyTrailing options. ([37368af](https://github.com/darkobits/strip-indent/commit/37368afea0464e4877d7b8e5a7942935bcf89824))
+
+
+### 🏗 Chores
+
+* Update dependencies. ([c3d0132](https://github.com/darkobits/strip-indent/commit/c3d01322b9501fafa481a5cd6203c7505b744ca7))
+
 ### [1.0.1](https://github.com/darkobits/strip-indent/compare/v1.0.0...v1.0.1) (2020-12-19)
 
 
