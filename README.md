@@ -3,8 +3,8 @@
 </a>
 <p align="center">
   <a href="https://www.npmjs.com/package/@darkobits/strip-indent"><img src="https://img.shields.io/npm/v/@darkobits/strip-indent.svg?style=flat-square"></a>
-  <a href="https://travis-ci.com/github/darkobits/strip-indent"><img src="https://img.shields.io/travis/com/darkobits/strip-indent?style=flat-square"></a>
-  <a href="https://www.codacy.com/app/darkobits/strip-indent"><img src="https://img.shields.io/codacy/coverage/7107d25365a14f5e8fa80b8e4d3fc4ca.svg?style=flat-square"></a>
+  <a href="https://github.com/darkobits/strip-indent/actions?query=workflow%3ACI"><img src="https://img.shields.io/github/workflow/status/darkobits/strip-indent/CI/master?style=flat-square"></a>
+  <a href="https://app.codecov.io/gh/darkobits/strip-indent/branch/master"><img src="https://img.shields.io/codecov/c/github/darkobits/strip-indent/master?style=flat-square"></a>
   <a href="https://david-dm.org/darkobits/strip-indent.svg?style=flat-square"></a>
   <a href="https://github.com/conventional-changelog/standard-version"><img src="https://img.shields.io/badge/conventional%20commits-1.0.0-027dc6.svg?style=flat-square"></a>
 </p>
